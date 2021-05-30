@@ -1,3 +1,18 @@
+
+a{
+    color: #f2f2f2;
+    padding: 10px 12px;
+    font-size: 17px;
+    text-decoration: none;
+}
+a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
     padding: 0;
@@ -82,6 +97,12 @@ textarea {
 
 
 
+
+
+
+
+
+
 .title{
     top: 0;
     width: 100%;
@@ -149,3 +170,9 @@ textarea {
       /* background-color: #444444; */
       /* position: absolute; */
   }
+
+
+
+
+
+

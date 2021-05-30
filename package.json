@@ -12,7 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.3.0",
+    "express-fileupload": "^0.3.0",
+    "file-system": "^2.2.2",
+    "hoek": "^5.0.3",
+    "browser-detect": "^0.2.27"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"

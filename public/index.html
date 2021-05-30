@@ -1,50 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
-    <meta itemprop="image" content="../../../images/webrtc-icon-192x192.png">
-    <meta id="theme-color" name="theme-color" content="#ffffff">
-
-    <base target="_blank">
-
-    <title>getUserMedia</title>
-
-    <link rel="icon" sizes="192x192" href="../../../images/webrtc-icon-192x192.png">
-    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="../../../css/main.css">
-    <script src="main.js"></script>
-    <script src="test.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wassup chat app</title>
+    <link rel="stylesheet" href="/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/styles.css"> -->
 
 </head>
 
 <body>
+    <!-- <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about"> -->
+    <h1 class="title">VIT Meet
+        <a class="active" href="#video">Video Meeting</a>
+        <a href="filesz.html">Upload files</a>
+        <a href="Online_recognition.html">Jam Board</a>
+        <a href="ss.html">Screen Share</a>
 
-<div id="container">
-    <h1><a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">WebRTC samples</a>
-        <span>getUserMedia</span></h1>
+        
+    </h1>
+    
+    <p id="notification" hidden></p>
+    <div class="entry-modal" id="entry-modal">
+        <p>Create or Join Meeting</p>
+        <input id="room-input" class="room-input" placeholder="Enter Room ID">
+        <div>
+            <button onclick="createRoom(0)">Create Room</button>
+            <button onclick="joinRoom()">Join Room</button>
+        </div>
+    </div>
+    <div class="meet-area">
+        <!-- Remote Video Element-->
+        <video id="remote-video"></video>
 
-    <video id="gum-local" autoplay playsinline></video>
-    <button id="showVideo">Open camera</button>
+        <!-- Local Video Element-->
+        <video id="local-video"></video>
 
-    <div id="errorMsg"></div>
+        <div id="showMute" class="showMute">
 
-    <p class="warning"><strong>Warning:</strong> if you're not using headphones, pressing play will cause feedback.</p>
+            <button onclick="mute_audio()">Mute Audio</button>
+            <button onclick="mute_video()">Mute Video</button>
+            <button onclick="document.location='ss.html'">Screen Share</button>
+        </div>
 
-    <p>Display the video stream from <code>getUserMedia()</code> in a video element.</p>
+    </div>
 
-    <p>The <code>MediaStream</code> object <code>stream</code> passed to the <code>getUserMedia()</code> callback is in
-        global scope, so you can inspect it from the console.</p>
 
-    <a href="https://github.com/webrtc/samples/tree/gh-pages/src/content/getusermedia/gum"
-       title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
-</div>
+    <script>
+        // function hideMute(){
+            document.getElementById("showMute").hidden = true;
+        // }
+    </script>
 
-<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-<!-- <script src="js/main.js"></script> -->
-<script src="main.js"></script>
-<script src="../../../js/lib/ga.js"></script>
-
+    <section class="chat__section">
+        <div class="brand">
+            <img height="40" src="/wassup.png" alt="">
+            <h1>Chat Box</h1>
+        </div>
+        <div class="message__area"></div>
+        <div>
+            <textarea id="textarea" cols="30" rows="1" placeholder="Write a message..."></textarea>
+        </div>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
 </body>
+
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="/script.js"></script>
+    <!-- <script src="/vaishnavi.js"></script> -->
+
 </html>

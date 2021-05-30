@@ -1,35 +1,12 @@
-const express = require('express')
-const app = express()
-const http = require('http').createServer(app)
-
-
+var express = require('express');
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 var fileUpload = require('express-fileupload');
 const browser = require('browser-detect');
+
 app.use(fileUpload());
-
-
-const PORT = process.env.PORT || 3000
-
-http.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`)
-})
 app.use(express.static(__dirname + '/public'));
-// app.use(express.static(__dirname + '/public/files.html'));
-
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
-})
-
-// Socket 
-const io = require('socket.io')(http)
-
-io.on('connection', (socket) => {
-    console.log('Connected...')
-    socket.on('message', (msg) => {
-        socket.broadcast.emit('message', msg)
-    })
-
-})
 
 //*******UPLOAD FILE***************************************************** */
 app.post('/upload', function(req, res) {
@@ -77,4 +54,24 @@ app.get('/file/:id', function(req, res) {
       });
     });
 });
+
 //*******END DOWNLOAD FILE***************************************************** */
+
+io.on('connection', function(socket){
+    socket.on('upload file', function(msg){
+      io.emit('upload file', msg);
+    });
+  });
+
+http.listen(3000, function(){
+  console.log('listening on *:3000');
+});
+
+io.on('connection', function(socket){
+    console.log('a user connected');
+    socket.on('disconnect', function(){
+        console.log('user disconnected');
+    });
+});
+
+io.emit('some event', { for: 'everyone' });

@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Upload file realtime</title>
+  </head>
+  <body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="appupload.js"></script>
+    <link rel="stylesheet" type="text/css" href="filesz.css">
+
+
+    <h1 class="title">VIT Meet
+      <a  href="index.html">Video Meeting</a>
+      <a class="active" href="filesz.html">Upload files</a>
+      <a href="Online_recognition.html">Jam Board</a>
+      <a href="ss.html">Screen Share</a>
+
+      
+  </h1>
+
+    <div class="container">
+      
+        <h1>Files Uploaded</h1>
+        
+        <table class="sortable" id="filesUploadedTable">
+          <thead>
+            <tr>
+              <th>Filename</th>
+              <th>Type</th>
+              <th>Size <small>(bytes)</small></th>
+              <th>URL</th>
+            </tr>
+          </thead>
+          <tbody>             
+          </tbody>
+        </table>
+      
+        <h2></h2>
+
+        <form ref='uploadForm' 
+          id='uploadForm'
+          method='post'
+          encType="multipart/form-data">      
+          <div class="container" style="height:70px;">                    
+              <input type='submit' value='Generate link' class="btn" id="btnUpload" />
+              <input type="file" name="file" class="upload" />
+              <div class="sk-circle" style="display:none">
+                  <div class="sk-circle1 sk-child"></div>
+                  <div class="sk-circle2 sk-child"></div>
+                  <div class="sk-circle3 sk-child"></div>
+                  <div class="sk-circle4 sk-child"></div>
+                  <div class="sk-circle5 sk-child"></div>
+                  <div class="sk-circle6 sk-child"></div>
+                  <div class="sk-circle7 sk-child"></div>
+                  <div class="sk-circle8 sk-child"></div>
+                  <div class="sk-circle9 sk-child"></div>
+                  <div class="sk-circle10 sk-child"></div>
+                  <div class="sk-circle11 sk-child"></div>
+                  <div class="sk-circle12 sk-child"></div>
+                </div>
+          </div>
+        </form>   
+        
+      </div>
+
+      <div class="container">
+        
+          <h1>Files Downloaded (Real-Time)</h1>
+          
+          <table class="sortable" id="filesDownloadedTable">
+            <thead>
+              <tr>
+                <th>URL</th>
+                <th>Browser</th>
+                <th>OS</th>
+              </tr>
+            </thead>
+            <tbody>             
+            </tbody>
+          </table>
+        
+          <h2>This table shows when a file was downloaded in real time.</h2>
+          
+      </div>
+
+
+  </body>
+</html>

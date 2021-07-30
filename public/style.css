@@ -4,13 +4,15 @@ a{
     padding: 10px 12px;
     font-size: 17px;
     text-decoration: none;
+    transition: 0.5s;
+
 }
 a:hover {
     background-color: #ddd;
     color: black;
   }
   a.active {
-    background-color: #04AA6D;
+    background-color: #8C6CE9;
     color: white;
   }
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -53,6 +55,9 @@ section.chat__section {
     flex-direction: column;
     overflow-y: auto;
     padding-top: 40px;
+    /* background-image: url('https://data.whicdn.com/images/321603075/original.png'); */
+    background-image: url('https://www.teahub.io/photos/full/284-2841044_iphone-wallpaper-dark-purple.jpg');
+    background-size: cover;
 }
 textarea {
     width: 100%;
@@ -86,21 +91,6 @@ textarea {
     color: #333;
     font-size: 14px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .title{
@@ -170,6 +160,23 @@ textarea {
       /* background-color: #444444; */
       /* position: absolute; */
   }
+
+
+  .brand{
+    background-color: #444444;
+
+  }
+
+ textarea{
+    background-color: #444444;
+
+  }
+
+
+  /* //new */
+
+
+  
 
 
 

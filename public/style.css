@@ -58,8 +58,8 @@ section.chat__section {
     flex-direction: column;
     overflow-y: auto;
     padding-top: 40px;
-    
-    background-image: url('https://www.teahub.io/photos/full/284-2841044_iphone-wallpaper-dark-purple.jpg');
+    /* background-image: url('https://cache.desktopnexus.com/thumbseg/1911/1911083-bigthumbnail.jpg'); */
+    background-image: url('https://cdn.allwallpaper.in/wallpapers/706x400/7419/purple-dots-706x400-wallpaper.jpg');
     background-size: cover;
 }
 textarea {
@@ -188,10 +188,12 @@ textarea {
     height: 100%;
     z-index: -1;
     /* margin: 0px!important; */
+    /* filter: blur(2px); */
+    /* backdrop-filter: blur(12px); */
 
     background-image: url('https://www.teahub.io/photos/full/284-2841044_iphone-wallpaper-dark-purple.jpg');
     background-size: cover;
-    background-position: 50% 50%;
+    /* background-position: 50% 50%; */
     background-repeat: no-repeat;
     background-color: rgb(160, 68, 235);
 }

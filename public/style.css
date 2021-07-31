@@ -296,7 +296,23 @@ button{
   opacity: 1;
   animation: animate 8s linear infinite;
 }
+ 
+.glow {
+    font-size: 105%;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
   
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #b000e6, 0 0 40px #b000e6, 0 0 50px #b000e6, 0 0 60px #b000e6, 0 0 70px #b000e6;
+    }
+    
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #7700e6ea, 0 0 40px #7700e6ea, 0 0 50px #7700e6ea, 0 0 60px #7700e6ea, 0 0 70px #7700e6ea, 0 0 80px #7700e6ea;
+      }
+  }
 
 
 

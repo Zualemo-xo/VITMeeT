@@ -217,15 +217,15 @@ button{
     text-decoration: none;
 }
 
-cta{
+.cta{
 	display:inline-block;
-	padding: 8px 20px;
+	padding: 4px 8px;
 	color:black;
-	border: 3px solid red;
-	font-size: 2rem;
+	border: 3px solid rgb(204, 0, 255);
+	font-size: 1rem;
 	text-transform: uppercase;
   box-sizing: border-box;
-  background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(168,47,84,1) 50%, rgba(252,176,69,1) 100%);
+  background: radial-gradient(circle,rgb(69, 154, 252)  0%, rgb(74, 156, 254) 50%, rgba(131,58,180,1) 100%);
 	letter-spacing: .1rem;
 	margin-top: 30px;
   transform: translate(5%, 5%);
@@ -258,6 +258,40 @@ cta{
   transition: 0.5s;
 }
 .cta:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
+
+
+
+
+.ctadj:hover {
+	animation: animate 8s linear infinite
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+.ctadj:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.ctadj:hover:before {
   filter: blur(20px);
   opacity: 1;
   animation: animate 8s linear infinite;

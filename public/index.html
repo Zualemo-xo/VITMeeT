@@ -10,7 +10,14 @@
 
 </head>
 
-<body>
+<body id="particles-js" >
+    <!-- <div id="particles-js"></div> -->
+
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    
+        
+
 
     <h1 class="title">VIT Meet
         <a class="active" href="#video">Video Meeting</a>
@@ -20,7 +27,7 @@
 
         
     </h1>
-    
+
     <p id="notification" hidden></p>
     <div class="entry-modal" id="entry-modal">
         <p>Create or Join Meeting</p>
@@ -30,17 +37,18 @@
             <button onclick="joinRoom()">Join Room</button>
         </div>
     </div>
-    <div class="meet-area">
+    <a href="signup" type="button" class="cta">DJ Effect</a><br><br>
+    <div class="meet-area" id="meet-area">
         <!-- Remote Video Element-->
         <video id="remote-video"></video>
 
         <!-- Local Video Element-->
         <video id="local-video"></video>
-
         <div id="showMute" class="showMute">
 
-            <button onclick="mute_audio()">Mute Audio</button>
-            <button onclick="mute_video()">Mute Video</button>
+            <button onclick="mute_audio()" class="cta">Mute Audio</button>
+            
+            <button onclick="mute_video()" class="cta">Mute Video</button>
            
         </div>
 
@@ -53,6 +61,7 @@
         // }
     </script>
 
+
     <section class="chat__section">
         <div class="brand">
             <img height="40" src="/wassup.png" alt="">
@@ -63,12 +72,15 @@
             <textarea id="textarea" cols="30" rows="1" placeholder="Type a message here.." style="color:white;"></textarea>
         </div>
     </section>
+    
     <script src="/socket.io/socket.io.js"></script>
     <script src="/client.js"></script>
+    
+    
 </body>
 
     <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
     <script src="/script.js"></script>
     <!-- <script src="/vaishnavi.js"></script> -->
-
+    
 </html>

@@ -23,18 +23,21 @@ a:hover {
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #F8F8F8;
-    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    /* display:block; */
+height:1000px;
+
 }
 section.chat__section {
+    top:10%;
+    left:70%;
+    position:inherit;
+
+
     width: 800px;
     max-width: 30%;
     background: #fff;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 200, 0.05);
 }
 .brand {
     padding: 20px;
@@ -55,7 +58,7 @@ section.chat__section {
     flex-direction: column;
     overflow-y: auto;
     padding-top: 40px;
-    /* background-image: url('https://data.whicdn.com/images/321603075/original.png'); */
+    
     background-image: url('https://www.teahub.io/photos/full/284-2841044_iphone-wallpaper-dark-purple.jpg');
     background-size: cover;
 }
@@ -88,7 +91,7 @@ textarea {
     position: absolute;
     top: -20px;
     left: 0;
-    color: #333;
+    color: #e9eafd;
     font-size: 14px;
 }
 
@@ -106,16 +109,20 @@ textarea {
 }
 
 .entry-modal{
+    display: flexbox;
     border: 1px solid #444444;
+    top:10%;
     width: 300px;
-    /* margin: auto; */
-    /* z-index: 9999; */
-    top: 70;
+    z-index: 1;
     margin-left: 150px;
+    position: absolute;
     padding: 5px;
     color: #fff;
     background-color: #444444;
     text-align: center;
+
+
+ 
 }
 
 #notification{
@@ -142,6 +149,7 @@ textarea {
   }
   
   #remote-video{
+    width:30%;
       /* top: 0;
       height: 100%;
       width: 100%;
@@ -151,8 +159,8 @@ textarea {
   }
   
   #local-video{
-      top: 60;
-      width: 300;
+      /* position:inherit; */
+      width:30%;
       /* object-fit: cover; */
       /* height: 150;
       z-index: 1;
@@ -173,9 +181,87 @@ textarea {
   }
 
 
+#particles-js
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* margin: 0px!important; */
+
+    background-image: url('https://www.teahub.io/photos/full/284-2841044_iphone-wallpaper-dark-purple.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: rgb(160, 68, 235);
+}
   /* //new */
 
+#meet-area{
+    display: flexbox;
+    top:20%;
+    z-index: 1;
+    margin-right: 30%;
+    position: absolute;
+    padding: 5px;
+    color: #fff;
 
+    text-align: center;
+}
+
+
+
+
+
+button{
+    text-decoration: none;
+}
+
+cta{
+	display:inline-block;
+	padding: 8px 20px;
+	color:black;
+	border: 3px solid red;
+	font-size: 2rem;
+	text-transform: uppercase;
+  box-sizing: border-box;
+  background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(168,47,84,1) 50%, rgba(252,176,69,1) 100%);
+	letter-spacing: .1rem;
+	margin-top: 30px;
+  transform: translate(5%, 5%);
+	transition: .3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	animation: animate 8s linear infinite
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+.cta:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.cta:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
   
 
 

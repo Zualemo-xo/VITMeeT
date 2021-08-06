@@ -108,22 +108,7 @@ textarea {
    padding: 5px;
 }
 
-.entry-modal{
-    display: flexbox;
-    border: 1px solid #444444;
-    top:10%;
-    width: 300px;
-    z-index: 1;
-    margin-left: 150px;
-    position: absolute;
-    padding: 5px;
-    color: #fff;
-    background-color: #444444;
-    text-align: center;
 
-
- 
-}
 
 #notification{
     position: absolute;
@@ -211,7 +196,22 @@ textarea {
     text-align: center;
 }
 
+.entry-modal{
+  display: flexbox;
+  border: 1px solid #444444;
+  top:40%;
+  width: 300px;
+  z-index: 1;
+  margin-left: 150px;
+  position: absolute;
+  padding: 5px;
+  color: #fff;
+  background-color: #444444;
+  text-align: center;
 
+
+
+}
 
 
 

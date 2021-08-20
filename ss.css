@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+html 
+{
+    box-sizing: border-box;
+}
+body 
+{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background : rgb(37 , 37 ,37);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.button-container 
+{
+    border : 2px solid black;
+    border-radius : 7px;
+    padding : 10px;
+    /* height: 100px; */
+    /* width: 100px; */
+    /* box-shadow: inset 20px 4px 19px rgba(255 , 255 , 255 , 0.7); */
+}
+button
+{
+    cursor : pointer;
+    outline : none;    
+    width : 120px;
+    height : 75px;
+    font-family: Barlow;
+    text-shadow: 0 2px 5px black;
+    background: linear-gradient(to top , #696969 , #575757);
+    border-radius : 7px;
+    border : 2px solid black;
+    color : white;
+    box-shadow: inset 20px 4px 19px rgba(255 , 255 , 255 , 0.4) , 
+    0 12px 12px 0 rgba(0 , 0 , 0 , 0.3)
+}
+button:hover
+{
+    background: linear-gradient(to bottom , #696969 , #575757);
+}
+button:active
+{
+    transform : translateY(3px);
+    box-shadow: 0 6px 6px 0 rgba(0 , 0  ,0 , 0.3);
+}
+
+a{
+    color: #f2f2f2;
+    padding: 10px 12px;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.5s;
+  
+  }
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  a.active {
+    background-color: #8C6CE9;
+    color: white;
+  }
+  
+    .title{
+      top: 0;
+      width: 100%;
+      z-index: 1;
+      display: block;
+      position: absolute;
+      background-color: #444444;
+      color: white;
+     margin: 0;
+     padding: 5px;
+  }
+  .glow {
+    font-size: 105%;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #b000e6, 0 0 40px #b000e6, 0 0 50px #b000e6, 0 0 60px #b000e6, 0 0 70px #b000e6;
+    }
+    
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #7700e6ea, 0 0 40px #7700e6ea, 0 0 50px #7700e6ea, 0 0 60px #7700e6ea, 0 0 70px #7700e6ea, 0 0 80px #7700e6ea;
+      }
+  }  

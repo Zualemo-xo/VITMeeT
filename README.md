@@ -1,6 +1,8 @@
 # VITMEET
 Realtime video conferencing application using socket.io and peerJS.
 ![image](https://user-images.githubusercontent.com/61049979/130315508-5605c7a7-afcf-42a2-a606-071dd7d4e282.png)
+## Deployment
+Link: https://vitmeet.onrender.com/
 
 ## Introduction:
 In today’s world of emerging technologies, education has
